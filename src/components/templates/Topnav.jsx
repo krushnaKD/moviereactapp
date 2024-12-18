@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "../../utils/axios";
+import noimage from "/noimage.png" 
 
 const Topnav = () => {
   const [query, setquery] = useState("");
@@ -22,7 +23,7 @@ const Topnav = () => {
 
   return (
     <div className="w-full h-[8vh] flex items-center justify-start ml-[15%] relative ">
-      <i class="text-zinc-100 text-xl ri-search-2-line"></i>
+      <i className="text-zinc-100 text-xl ri-search-2-line"></i>
       <input
         onChange={(e) => setquery(e.target.value)}
         value={query}
@@ -33,14 +34,15 @@ const Topnav = () => {
       {query.length > 0 && (
         <i
           onClick={() => setquery("")}
-          class="text-zinc-100 text-xl ri-close-large-line"
+          className="text-zinc-100 text-xl ri-close-large-line"
         ></i>
       )}
 
       <div className="w-[50%] max-h-[50vh] absolute top-[93%] bg-zinc-200 rounded-md overflow-auto">
         {searches && searches.map((s, i) => (
           <Link className="hover:text-black hover:bg-zinc-300 duration-300 p-5 border-b-2 w-[100%] border-zinc-100 text-zinc-600 flex items-center justify-center font-semibold">
-            <img src="" alt="" />
+            <img className="w-[10vh] h-[10vh] rounded mr-10 object-cover" 
+            src={s.backdrop_path || s.profile_path? `https://image.tmdb.org/t/p/w500/${s.backdrop_path || s.profile_path}`: noimage } alt="" />
             <h1>{s.name||s.original_name}</h1>
           </Link>
         ))}

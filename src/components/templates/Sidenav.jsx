@@ -10,7 +10,7 @@ function Sidenav() {
   return (
     <div className="w-[20%] h-screen border-r-2 border-zinc-400 p-5">
       <h1 className="text-white text-2xl font-bold ">
-        <i class=" text-[#6556CD] ri-tv-line mr-2"></i>
+        <i className=" text-[#6556CD] ri-tv-line mr-2"></i>
         <span className="text-xl">MoviesZilla.</span>
       </h1>
       <nav className="flex flex-col text-zinc-400 gap-2">
@@ -18,19 +18,19 @@ function Sidenav() {
           New Feeds
         </h1>
         <Link className="hover:bg-[#6556CD] hover:text-white duration-300 p-5 rounded-lg">
-          <i class=" mr-2 ri-fire-fill"></i> Trending
+          <i className=" mr-2 ri-fire-fill"></i> Trending
         </Link>
         <Link className="hover:bg-[#6556CD] hover:text-white duration-300 p-5 rounded-lg">
-          <i class="mr-2 ri-bard-fill"></i> Popular
+          <i className="mr-2 ri-bard-fill"></i> Popular
         </Link>
         <Link className="hover:bg-[#6556CD] hover:text-white duration-300 p-5 rounded-lg">
-          <i class="mr-2 ri-movie-2-fill"></i> Movies
+          <i className="mr-2 ri-movie-2-fill"></i> Movies
         </Link>
         <Link className="hover:bg-[#6556CD] hover:text-white duration-300 p-5 rounded-lg">
-          <i class="mr-2 ri-slideshow-3-fill"></i> Tv Shows
+          <i className="mr-2 ri-slideshow-3-fill"></i> Tv Shows
         </Link>
         <Link className="hover:bg-[#6556CD] hover:text-white duration-300 p-5 rounded-lg">
-          <i class="mr-2 ri-group-fill"></i> People
+          <i className="mr-2 ri-group-fill"></i> People
         </Link>
       </nav>
       <hr className="mt-2 mb-2"/>
@@ -39,10 +39,10 @@ function Sidenav() {
           Website Information
         </h1>
         <Link className="hover:bg-[#6556CD] hover:text-white duration-300 p-5 rounded-lg">
-        <i class="mr-2 ri-information-line"></i> About
+        <i className="mr-2 ri-information-line"></i> About
         </Link>
         <Link className="hover:bg-[#6556CD] hover:text-white duration-300 p-5 rounded-lg">
-        <i class="ri-contacts-line mr-2"></i> Contact
+        <i className="ri-contacts-line mr-2"></i> Contact
         </Link>
        
       </nav>
