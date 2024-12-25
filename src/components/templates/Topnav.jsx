@@ -21,7 +21,7 @@ const Topnav = () => {
   }, [query]);
 
   return (
-    <div className="w-[60%] h-[8vh] flex items-center mx-auto  relative ">
+    <div className=" w-[60%] h-[8vh] flex items-center mx-auto  relative ">
       <i className="text-zinc-100 text-xl ri-search-2-line"></i>
       <input
         onChange={(e) => setquery(e.target.value)}
@@ -43,9 +43,9 @@ const Topnav = () => {
           //   backgroundPosition: "top",
           //   backgroundSize: "cover",}
           // }
-      className="w-[50%] max-h-[50vh] absolute top-[93%] rounded-md overflow-auto">
+      className="z-[100] w-[50%] max-h-[50vh] absolute top-[93%] rounded-md overflow-auto">
         {searches && searches.map((s, i) => (
-          <Link className="hover:text-black hover:bg-zinc-300 duration-300 p-5 border-b-2 w-[100%] border-zinc-100 text-zinc-600 flex items-center justify-center font-semibold">
+          <Link className="hover:text-black hover:bg-zinc-300 duration-300 p-5 border-b-2 w-[100%] bg-zinc-200 border-zinc-100 text-zinc-600 flex items-center justify-center font-semibold">
             <img className="w-[10vh] h-[10vh] rounded mr-10 object-cover" 
             src={s.backdrop_path || s.profile_path? `https://image.tmdb.org/t/p/w500/${s.backdrop_path || s.profile_path}`: noimage } alt="" />
             <h1>{s.name||s.original_name}</h1>

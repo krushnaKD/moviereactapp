@@ -32,10 +32,14 @@ function Hone() {
       console.log("Error", error);
     }
   };
-
+  setInterval(() => {});
   useEffect(() => {
     getTrending();
-    !wallpaper && getWallpaper();
+    if (!wallpaper) {
+      getWallpaper();
+    }
+    getWallpaper()
+  
   }, [category]);
 
   return wallpaper && trending ? (
@@ -49,7 +53,7 @@ function Hone() {
           <h1 className="text-2xl font-semibold text-gray-200">Trending</h1>
           <Dropdown
             title="Filter"
-            options={["Tv", "movie", "all"]}
+            options={["tv", "movie", "all"]}
             func={(e) => setcategory(e.target.value)}
           />
         </div>

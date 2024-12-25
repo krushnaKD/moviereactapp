@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Header({ data }) {
+console.log(data);
 
   return (
     <div
