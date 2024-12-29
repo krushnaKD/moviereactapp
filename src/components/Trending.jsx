@@ -21,7 +21,6 @@ const Trending = () => {
       if(data.results.length >0){
         settrending((prevstate)=>[...prevstate,...data.results])
         setpage(page + 1)
-      console.log(data);
       } else {
         sethasMore(false)
       }
@@ -54,7 +53,7 @@ const Trending = () => {
         <i onClick={()=>{
           navigate(-1)
         }} className="hover:text-[#6556cd] text-2xl  ri-arrow-left-line"></i>
-          Trending<spna className="text-sm ml-2 ">({category.toUpperCase()})</spna>
+          Trending<span className="text-sm ml-2 ">({category.toUpperCase()})</span>
         </h1>
         
         <Topnav />

@@ -38,14 +38,12 @@ const Topnav = () => {
       )}
 
       <div 
-          // style={
-          //   {background: "linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.7),rgba(0,0,0,.9))",
-          //   backgroundPosition: "top",
-          //   backgroundSize: "cover",}
-          // }
+      
       className="z-[100] w-[50%] max-h-[50vh] absolute top-[93%] rounded-md overflow-auto">
         {searches && searches.map((s, i) => (
-          <Link className="hover:text-black hover:bg-zinc-300 duration-300 p-5 border-b-2 w-[100%] bg-zinc-200 border-zinc-100 text-zinc-600 flex items-center justify-center font-semibold">
+          <Link 
+           to={`${s.media_type}/details/${s.id}`}
+          className="hover:text-black hover:bg-zinc-300 duration-300 p-5 border-b-2 w-[100%] bg-zinc-200 border-zinc-100 text-zinc-600 flex items-center justify-center font-semibold">
             <img className="w-[10vh] h-[10vh] rounded mr-10 object-cover" 
             src={s.backdrop_path || s.profile_path? `https://image.tmdb.org/t/p/w500/${s.backdrop_path || s.profile_path}`: noimage } alt="" />
             <h1>{s.name||s.original_name}</h1>

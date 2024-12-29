@@ -6,6 +6,10 @@ import Popular from "./components/Popular";
 import Movie from "./components/Movie";
 import Tvshows from "./components/Tvshows";
 import People from "./components/People";
+import TvDetails from "./components/TvDetails";
+import MovieDetails from "./components/MovieDetails";
+import PersonDetails from "./components/PersonDetails";
+
 function App() {
   return (
     <div className="bg-[#1f1e24] w-screen h-full flex  select-none">
@@ -14,9 +18,13 @@ function App() {
         <Route path="/trending" element={<Trending />} />
         <Route path="/Popular" element={<Popular />} />
         <Route path="/movie" element={<Movie />} />
-        <Route path="/Tvshows" element={<Tvshows />} />
-        <Route path="/person" element={<People />} />
+        <Route path="/movie/details/:id" element={<MovieDetails />} />
 
+        <Route path="/Tvshows" element={<Tvshows />} />
+        <Route path="/tv/details/:id" element={<TvDetails />} />
+
+        <Route path="/person" element={<People />} />
+        <Route path="/person/details/:id" element={<PersonDetails />} />
       </Routes>
     </div>
   );

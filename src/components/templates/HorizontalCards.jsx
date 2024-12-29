@@ -1,12 +1,13 @@
 import React from "react";
 import Dropdown from "./Dropdown";
+import { Link } from "react-router-dom";
 
 const HorizontalCards = ({ data }) => {
 
   return (
     <div className="w-[100%] flex overflow-x-auto gap-2 p-3">
       {data.map((d, i) => (
-        <div
+        <Link to={`/${d.media_type || title}/details/${d.id}`}
           style={{
             background:
               "linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.7),rgba(0,0,0,.9))",
@@ -35,7 +36,7 @@ const HorizontalCards = ({ data }) => {
           <h3>
             <i className="ri-movie-2-fill"></i> {d.media_type}
           </h3>
-        </div>
+        </Link>
       ))}
     </div>
   );

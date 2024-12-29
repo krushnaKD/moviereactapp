@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Header({ data }) {
-console.log(data);
 
   return (
     <div
@@ -20,7 +19,7 @@ console.log(data);
       </h1>
       <p className="w-[60%] mt-3 text-gray-400 text-lg">
         {data.overview.slice(0, 200)}
-        <span className="text-blue-400">...more</span>
+        <Link to={`/${data.media_type}/details/${data.id}`} className="text-blue-400">...more</Link>
       </p>
       <h3 className="text-gray-300 mt-3 mb-4">
         In Cinemas :- <i className="ri-movie-2-fill"></i> {data.release_date || "Comming Soon"}

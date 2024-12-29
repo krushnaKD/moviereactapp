@@ -11,7 +11,6 @@ function Hone() {
   const [wallpaper, setwallpaper] = useState(null);
   const [trending, settrending] = useState(null);
   const [category, setcategory] = useState("all");
-  console.log(category);
 
   const getWallpaper = async () => {
     try {

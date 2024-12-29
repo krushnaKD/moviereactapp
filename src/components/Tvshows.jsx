@@ -20,7 +20,6 @@ const Tvshows = () => {
           if(data.results.length >0){
             setTvshow((prevstate)=>[...prevstate,...data.results])
             setpage(page + 1)
-          console.log(data);
           } else {
             sethasMore(false)
           }
@@ -53,7 +52,7 @@ const Tvshows = () => {
         <i onClick={()=>{
           navigate(-1)
         }} className="hover:text-[#6556cd] text-2xl   ri-arrow-left-line"></i>
-          TvShows<spna className="text-sm ml-2 text-zinc-500">({category.toUpperCase()})</spna>
+          TvShows<span className="text-sm ml-2 text-zinc-500">({category.toUpperCase()})</span>
         </h1>
         
         <Topnav />
@@ -71,7 +70,7 @@ const Tvshows = () => {
    hasMore={hasMore}
    loader={<h1>Loading</h1>}
   >
-  <Cards data={TvShow} title="Popular" />
+  <Cards data={TvShow} title="tv" />
   </InfiniteScroll>
     </div>
   ) : (

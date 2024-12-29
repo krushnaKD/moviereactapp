@@ -21,7 +21,6 @@ const Movie = () => {
           if(data.results.length >0){
             setmovie((prevstate)=>[...prevstate,...data.results])
             setpage(page + 1)
-          console.log(data);
           } else {
             sethasMore(false)
           }
@@ -54,7 +53,7 @@ const Movie = () => {
         <i onClick={()=>{
           navigate(-1)
         }} className="hover:text-[#6556cd] text-2xl   ri-arrow-left-line"></i>
-          Movies<spna className="text-sm ml-2 ">({category.toUpperCase()})</spna>
+          Movies<span className="text-sm ml-2 ">({category.toUpperCase()})</span>
         </h1>
         
         <Topnav />
@@ -72,7 +71,7 @@ const Movie = () => {
    hasMore={hasMore}
    loader={<h1>Loading</h1>}
   >
-  <Cards data={Movie} title="Popular" />
+  <Cards data={Movie} title="movie" />
   </InfiniteScroll>
     </div>
   ) : (
