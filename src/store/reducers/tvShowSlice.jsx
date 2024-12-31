@@ -14,11 +14,11 @@ export const tvShowSlice = createSlice({
             state.info = action.payload;
         },
         removetvShow:(state,action)=>{
-            state.info = Null
+            state.info = null
         },
     },
 })
 
-export const {loadtvShow,removetvShow} = tvShowSlice.actions
+export const { loadtvShow,removetvShow } = tvShowSlice.actions
 
 export default tvShowSlice.reducer

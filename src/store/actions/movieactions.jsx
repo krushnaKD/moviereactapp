@@ -2,7 +2,6 @@ export {removemovie} from "../reducers/MovieSlice"
 import axios from "../../utils/axios"
 import {loadmovie}  from "../reducers/MovieSlice"
    
-// loadmovie()
 export const asyncmovieload = (id) => async (dispatch,getState)=>{
     try {
         const detail = await axios.get(`/movie/${id}`)

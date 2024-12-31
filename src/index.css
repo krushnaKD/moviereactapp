@@ -8,7 +8,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #181819;
+  background-color: #3e3e41;
   border-radius: 10px;
 }
 
@@ -73,3 +73,5 @@ select::-ms-expand{
 .select:hover::after{
     background: #6556cd;
 }
+
+
