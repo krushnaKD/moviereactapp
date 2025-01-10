@@ -7,7 +7,7 @@ const HorizontalCards = ({ data }) => {
     <div className="w-[100%] flex overflow-x-auto gap-2 p-3">
       {data.length > 0 ? data.map((d, i) => (
         <Link
-          to={`/${d.media_type || title}/details/${d.id}`}
+          to={`/${d.media_type }/details/${d.id}`}
           style={{
             background:
               "linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.7),rgba(0,0,0,.9))",
@@ -43,3 +43,5 @@ const HorizontalCards = ({ data }) => {
 };
 
 export default HorizontalCards;
+
+
